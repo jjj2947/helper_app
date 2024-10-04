@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import androidx.activity.OnBackPressedCallback;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class OptionActivity extends AppCompatActivity {
@@ -26,6 +27,7 @@ public class OptionActivity extends AppCompatActivity {
         Button button8 = findViewById(R.id.button8);
         Button button9 = findViewById(R.id.button9);
         Button button10 = findViewById(R.id.button10);
+
         // button1에 리스너 설정
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -111,12 +113,17 @@ public class OptionActivity extends AppCompatActivity {
         button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG, "두통 버튼이 클릭되었습니다.");
-                Intent intent = new Intent(OptionActivity.this, HeadacheActivity.class);
+                Log.d(TAG, "기타 버튼이 클릭되었습니다.");
+                Intent intent = new Intent(OptionActivity.this, EtcActivity.class);
                 startActivity(intent);
             }
+
         });
 
 
+
+
+
     }
+
 }

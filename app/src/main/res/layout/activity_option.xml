@@ -8,8 +8,8 @@
 
     <!-- 버튼들 -->
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="374dp"
+        android:layout_height="485dp"
         android:layout_margin="20dp"
         android:gravity="center"
         android:orientation="horizontal"
@@ -58,6 +58,7 @@
 
 
         <!-- 오른쪽 버튼들 -->
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -124,5 +125,6 @@
             android:text="어디가 아픈가요?"
             android:textSize="18sp" />
     </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

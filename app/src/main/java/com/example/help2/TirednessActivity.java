@@ -1,13 +1,14 @@
 package com.example.help2; // 실제 패키지 이름으로 변경하세요
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class TirednessActivity extends AppCompatActivity {
-
+    private static final String TAG = "OptionActivity"; // TAG 정의
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,7 @@ public class TirednessActivity extends AppCompatActivity {
         Button Tbutton6 = findViewById(R.id.Tbutton6);
         Button Tbutton7 = findViewById(R.id.Tbutton7);
         Button Tbutton8 = findViewById(R.id.Tbutton8);
+        Button Tbutton0 = findViewById(R.id.Tbutton0);
         // 버튼 클릭 리스너 설정
         Tbutton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +77,13 @@ public class TirednessActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(TirednessActivity.this, "약H 클릭됨", Toast.LENGTH_SHORT).show();
+            }
+        });
+        Tbutton0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "뒤로가기 버튼이 클릭되었습니다.");
+                finish(); // 현재 Activity를 종료하고 이전 Activity로 돌아갑니다.
             }
         });
     }
